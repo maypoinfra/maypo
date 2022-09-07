@@ -41,4 +41,11 @@ explore: h_uic_estatus_pedido_al_dia {
     type:  left_outer
   }
 
+  join: cat_indicador {
+    view_label: "Indicador"
+    relationship: many_to_one
+    sql_on: ${cat_indicador.cve_indicador} = ${h_uic_estatus_pedido_al_dia.cve_indicador};;
+    type:  left_outer
+  }
+
 }
