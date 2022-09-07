@@ -53,7 +53,7 @@ view: h_uic_estatus_pedido_al_dia {
 
   measure: Total_importe {
     type: sum
-    sql: ${TABLE}.IMPORTE ;;
+    sql: ${TABLE}.IMPORTE/1000000 ;;
     value_format: "$#,##0.00"
   }
 
