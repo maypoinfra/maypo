@@ -29,11 +29,6 @@ view: h_uic_estatus_pedido_al_dia {
     sql: ${TABLE}.CVE_INDICADOR ;;
   }
 
-  dimension: desc_indicador {
-    type: string
-    sql: ${TABLE}.DESC_INDICADOR ;;
-  }
-
   dimension: cantidad {
     type: number
     sql: ${TABLE}.CANTIDAD ;;
