@@ -1,6 +1,12 @@
 connection: "bigquery_proyecto_maypo_prd"
 include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 
+datagroup: proyecto_maypo_default_datagroup {
+  max_cache_age: "1 hour"
+}
+
+persist_with: proyecto_maypo_default_datagroup
+
 explore: h_uic_seguimiento_pedido_principal {
   label: "Seguimiento a Pedidos UIC"
   view_label: "Hechos-Seguimiento a Pedido"
