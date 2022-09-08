@@ -31,4 +31,9 @@ view: zsd_carga_maypo {
     type: count
     drill_fields: []
   }
+
+  measure: Total_Registros{
+    type: sum
+    sql: ${TABLE}.REGISTROS ;;
+  }
 }
