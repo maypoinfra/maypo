@@ -28,7 +28,7 @@ explore: seguimiento_pedido_entrega {
   }
 
   join: cat_motivo_rechazo_pedido {
-    view_label: "Motivo Pedido"
+    view_label: "Motivo Rechazo"
     relationship: many_to_one
     sql_on:  ${seguimiento_pedido_entrega.motivo_rechazo}  = ${cat_motivo_rechazo_pedido.cve_motivo_rechazo};;
     type: left_outer
