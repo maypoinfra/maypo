@@ -24,21 +24,21 @@ explore: h_uic_seguimiento_pedido_principal {
     view_label: "Cliente Solicita"
     relationship: many_to_one
     sql_on:  ${h_uic_seguimiento_pedido_principal.sr_cli_solicitante} = ${dim_cliente_solicitante.sr_cliente};;
-    type: inner
+    type: left_outer
   }
 
   join: dim_cliente_destina {
     view_label: "Cliente Destino"
     relationship: many_to_one
     sql_on: ${h_uic_seguimiento_pedido_principal.sr_cli_destina} = ${dim_cliente_destina.sr_cliente};;
-    type:  inner
+    type: left_outer
   }
 
   join: dim_material {
     view_label: "Material"
     relationship: many_to_one
     sql_on: ${h_uic_seguimiento_pedido_principal.sr_material} = ${dim_material.sr_material};;
-    type:  inner
+    type:  left_outer
   }
 
   join: dim_proveedor {
