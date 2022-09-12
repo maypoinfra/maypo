@@ -1,5 +1,4 @@
 view: derived_seguimiento_pedido_entrega {
-  label: "Derivado"
   derived_table: {
     sql: SELECT ROWNUM, DOCUMENTO_MODELO, POSICION_MODELO,CONTRATO_CLIENTE,
                 FECHA_CREACION_PEDIDO,FECHA_ARE, LOTE, MATERIAL, CANTIDAD_PEDIDO, CANTIDAD_ENTREGA
