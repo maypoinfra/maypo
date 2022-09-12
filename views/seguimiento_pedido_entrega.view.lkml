@@ -2,6 +2,32 @@ view: seguimiento_pedido_entrega {
   sql_table_name: `proyectos-maypo.ODS.SEGUIMIENTO_PEDIDO_ENTREGA`
     ;;
 
+  parameter: fecha_creacion_are {
+    type: yesno
+    description: "Fecha: Creacion / Are"
+  }
+
+  parameter: creacion_date_param_ini {
+    type: date
+    description: "Creacion Fecha Inicio"
+  }
+
+  parameter: creacion_date_param_end {
+    type: date
+    description: "Creacion Fecha Fin"
+  }
+
+  parameter: are_date_param_ini {
+    type: date
+    description: "Are Fecha Inicio"
+  }
+
+  parameter: are_date_param_end {
+    type: date
+    description: "Are Fecha Fin"
+  }
+
+
   dimension: almacen {
     type: string
     sql: ${TABLE}.ALMACEN ;;
