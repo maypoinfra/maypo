@@ -1,20 +1,19 @@
 view: derived_seguimiento_pedido_entrega {
-
-derived_table: {
-  sql: SELECT ROWNUM, DOCUMENTO_MODELO, POSICION_MODELO,CONTRATO_CLIENTE,
+  derived_table: {
+    sql: SELECT ROWNUM, DOCUMENTO_MODELO, POSICION_MODELO,CONTRATO_CLIENTE,
                 FECHA_CREACION_PEDIDO,FECHA_ARE, LOTE, MATERIAL, CANTIDAD_PEDIDO, CANTIDAD_ENTREGA
             FROM proyectos-maypo.ODS.SEGUIMIENTO_PEDIDO_ENTREGA
       WHERE 1=1
-      AND IF(COALESCE({% parameter fecha_creacion_are %},false),
-            FECHA_CREACION_PEDIDO >= CAST( {% parameter creacion_date_param_ini %} AS DATE)
-          AND FECHA_CREACION_PEDIDO <= CAST( {% parameter creacion_date_param_end %} AS DATE)
-
+      {% if fecha_creacion_are._parameter_value == 'Yes' %}
+        AND FECHA_CREACION_PEDIDO >= CAST( {% parameter creacion_date_param_ini %} AS DATE)
+        AND FECHA_CREACION_PEDIDO <= CAST( {% parameter creacion_date_param_end %} AS DATE)
+      {% endif %}
+      {% if fecha_creacion_are._parameter_value == 'No' %}
          AND FECHA_ARE >= CAST( {% parameter are_date_param_ini %} AS DATE)
-          AND FECHA_ARE <= CAST( {% parameter are_date_param_end %} AS DATE),
-
-          FALSE
-          ) ;;
-}
+         AND FECHA_ARE <= CAST( {% parameter are_date_param_end %} AS DATE)
+      {% endif %}
+      ;;
+  }
 
   parameter: fecha_creacion_are {
     type: yesno
