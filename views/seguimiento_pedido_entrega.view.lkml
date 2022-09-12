@@ -143,21 +143,6 @@ view: seguimiento_pedido_entrega {
     sql: ${TABLE}.ESTATUS ;;
   }
 
-  dimension_group: fecha_are {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}.FECHA_ARE ;;
-  }
-
   dimension_group: fecha_creacion_pedido {
     type: time
     timeframes: [
@@ -170,8 +155,29 @@ view: seguimiento_pedido_entrega {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.FECHA_CREACION_PEDIDO ;;
+    sql: {% if fecha_creacion_are._parameter_value == 'true' %}
+            ${TABLE}.FECHA_CREACION_PEDIDO
+          {% endif %};;
   }
+
+  dimension_group: fecha_are {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: {% if fecha_creacion_are._parameter_value == 'false' %}
+            ${TABLE}.FECHA_ARE
+         {% endif %};;
+  }
+
+
 
   dimension_group: fecha_entrega {
     type: time
