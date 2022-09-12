@@ -5,9 +5,11 @@ view: derived_seguimiento_pedido_entrega {
             FROM proyectos-maypo.ODS.SEGUIMIENTO_PEDIDO_ENTREGA
       WHERE 1=1
       {% if fecha_creacion_are._parameter_value == 'Yes' %}
+        {{ fecha_creacion_are._parameter_value }}
         AND FECHA_CREACION_PEDIDO >= CAST( {% parameter creacion_date_param_ini %} AS DATE)
         AND FECHA_CREACION_PEDIDO <= CAST( {% parameter creacion_date_param_end %} AS DATE)
     {% else %}
+        {{ fecha_creacion_are._parameter_value }}
          AND FECHA_ARE >= CAST( {% parameter are_date_param_ini %} AS DATE)
          AND FECHA_ARE <= CAST( {% parameter are_date_param_end %} AS DATE)
       {% endif %}
