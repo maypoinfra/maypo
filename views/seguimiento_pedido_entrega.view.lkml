@@ -155,9 +155,7 @@ view: seguimiento_pedido_entrega {
     ]
     convert_tz: no
     datatype: date
-    sql: {% if fecha_creacion_are._parameter_value == 'true' %}
-            ${TABLE}.FECHA_CREACION_PEDIDO
-          {% endif %};;
+    sql:   ${TABLE}.FECHA_CREACION_PEDIDO ;;
   }
 
   dimension_group: fecha_are {
@@ -172,9 +170,7 @@ view: seguimiento_pedido_entrega {
     ]
     convert_tz: no
     datatype: date
-    sql: {% if fecha_creacion_are._parameter_value == 'false' %}
-            ${TABLE}.FECHA_ARE
-         {% endif %};;
+    sql: ${TABLE}.FECHA_ARE ;;
   }
 
 
