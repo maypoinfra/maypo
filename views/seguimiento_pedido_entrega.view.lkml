@@ -156,7 +156,7 @@ view: seguimiento_pedido_entrega {
     convert_tz: no
     datatype: date
     sql: {% if fecha_creacion_are._parameter_value == 'false' %}
-         AND FECHA_ARE >= CAST( {% parameter are_date_param_ini %} AS DATE)
+         FECHA_ARE >= CAST( {% parameter are_date_param_ini %} AS DATE)
          AND FECHA_ARE <= CAST( {% parameter are_date_param_end %} AS DATE)
       {% endif %} ;;
   }
@@ -174,7 +174,7 @@ view: seguimiento_pedido_entrega {
     convert_tz: no
     datatype: date
     sql:  {% if fecha_creacion_are._parameter_value == 'true' %}
-        AND FECHA_CREACION_PEDIDO >= CAST( {% parameter creacion_date_param_ini %} AS DATE)
+         FECHA_CREACION_PEDIDO >= CAST( {% parameter creacion_date_param_ini %} AS DATE)
         AND FECHA_CREACION_PEDIDO <= CAST( {% parameter creacion_date_param_end %} AS DATE)
     {% endif %} ;;
   }
