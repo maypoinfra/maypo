@@ -10,12 +10,29 @@ persist_with: proyecto_maypo_default_datagroup
 explore: seguimiento_pedido_entrega {
   label: "Seguimiento a Pedidos y Entrega UIC"
   view_label: "Hechos-Seguimiento a pedido y entrega"
+  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}})
+  AND ${dim_material.tipo_material}='Z001';;
+
 
   join: dim_material {
     view_label: "Material"
     relationship: many_to_one
     sql_on: ${seguimiento_pedido_entrega.material} = ${dim_material.cve_material};;
     type:  left_outer
+  }
+
+  join: dim_cliente_destina {
+    view_label: "Cliente Destino"
+    relationship: many_to_one
+    sql_on: ${seguimiento_pedido_entrega.destinatario_mcia} = ${dim_cliente_destina.cve_clave};;
+    type: left_outer
+  }
+
+  join: dim_cliente_solicitante {
+    view_label: "Cliente Solicita"
+    relationship: many_to_one
+    sql_on:  ${seguimiento_pedido_entrega.solicitante} = ${dim_cliente_solicitante.cve_clave};;
+    type: left_outer
   }
 
   join: cat_motivo_are {
