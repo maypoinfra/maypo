@@ -65,4 +65,12 @@ explore: seguimiento_pedido_entrega {
     type:  left_outer
   }
 
+  join: dim_lote {
+    view_label: "Lotes"
+    relationship: many_to_one
+    sql_on: ${dim_lote.cve_material} = ${seguimiento_pedido_entrega.material}
+        AND ${dim_lote.cve_lote}     = ${seguimiento_pedido_entrega.lote};;
+    type:  left_outer
+  }
+
 }
