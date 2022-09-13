@@ -7,6 +7,7 @@ datagroup: proyecto_maypo_default_datagroup {
 
 persist_with: proyecto_maypo_default_datagroup
 
+# ---------------------------SABANA DE SEGUIMIENTO A PEDIDOS Y ENTREGAS UIC---------------------------
 explore: seguimiento_pedido_entrega {
   label: "Seguimiento a Pedidos y Entrega UIC"
   view_label: "Hechos-Seguimiento a pedido y entrega"
