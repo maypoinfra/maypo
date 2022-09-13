@@ -11,6 +11,12 @@ explore: seguimiento_pedido_entrega {
   label: "Seguimiento a Pedidos y Entrega UIC"
   view_label: "Hechos-Seguimiento a pedido y entrega"
 
+  join: dim_material {
+    view_label: "Material"
+    relationship: many_to_one
+    sql_on: ${seguimiento_pedido_entrega.material} = ${dim_material.cve_material};;
+    type:  left_outer
+  }
 
   join: cat_motivo_are {
     view_label: "Motivo Are"
@@ -33,5 +39,7 @@ explore: seguimiento_pedido_entrega {
     sql_on:  ${seguimiento_pedido_entrega.cve_motivo_rechazo}  = ${cat_motivo_rechazo_pedido.cve_motivo_rechazo};;
     type: left_outer
   }
+
+
 
 }
