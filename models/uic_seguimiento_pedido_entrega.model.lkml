@@ -58,6 +58,11 @@ explore: seguimiento_pedido_entrega {
     type: left_outer
   }
 
-
+  join: dim_proveedor {
+    view_label: "Proveedor"
+    relationship: many_to_one
+    sql_on: ${dim_proveedor.cve_proveedor} = '0000'||${dim_material.prov_reportes};;
+    type:  left_outer
+  }
 
 }
