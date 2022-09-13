@@ -1,5 +1,5 @@
 view: cat_motivo_pedido {
-  sql_table_name: `ODS.CAT_MOTIVO_PEDIDO`
+  sql_table_name: `proyectos-maypo.ODS.CAT_MOTIVO_PEDIDO`
     ;;
 
   dimension: cve_motivo_pedido {
