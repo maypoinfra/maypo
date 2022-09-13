@@ -15,7 +15,7 @@ explore: seguimiento_pedido_entrega {
   join: cat_motivo_are {
     view_label: "Motivo Are"
     relationship: many_to_one
-    sql_on:  ${seguimiento_pedido_entrega.motivo_are}  = ${cat_motivo_are.cve_motivo_are};;
+    sql_on:  ${seguimiento_pedido_entrega.cve_motivo_are}  = ${cat_motivo_are.cve_motivo_are};;
     type: left_outer
   }
 
@@ -23,14 +23,14 @@ explore: seguimiento_pedido_entrega {
   join: cat_motivo_pedido {
     view_label: "Motivo Pedido"
     relationship: many_to_one
-    sql_on:  ${seguimiento_pedido_entrega.motivo_pedido}  = ${cat_motivo_pedido.cve_motivo_pedido};;
+    sql_on:  ${seguimiento_pedido_entrega.cve_motivo_pedido}  = ${cat_motivo_pedido.cve_motivo_pedido};;
     type: left_outer
   }
 
   join: cat_motivo_rechazo_pedido {
     view_label: "Motivo Rechazo"
     relationship: many_to_one
-    sql_on:  ${seguimiento_pedido_entrega.motivo_rechazo}  = ${cat_motivo_rechazo_pedido.cve_motivo_rechazo};;
+    sql_on:  ${seguimiento_pedido_entrega.cve_motivo_rechazo}  = ${cat_motivo_rechazo_pedido.cve_motivo_rechazo};;
     type: left_outer
   }
 
