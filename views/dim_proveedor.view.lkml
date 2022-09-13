@@ -5,7 +5,7 @@ view: dim_proveedor {
   dimension: cve_proveedor {
     primary_key: yes
     type: string
-    sql: COALESCE(${TABLE}.CVE_PROVEEDOR,0) ;;
+    sql: ${TABLE}.CVE_PROVEEDOR ;;
   }
 
   dimension: altitud {
