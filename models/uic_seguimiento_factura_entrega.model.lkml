@@ -24,7 +24,7 @@ explore: seguimiento_factura_entrega {
   join: dim_material {
     view_label: "Material"
     relationship: many_to_one
-    sql_on: ${seguimiento_factura_entrega.sr_material} = ${dim_material.sr_material};;
+    sql_on: ${seguimiento_factura_entrega.sr_material} = ${dim_material.cve_material};;
     type:  left_outer
   }
 
