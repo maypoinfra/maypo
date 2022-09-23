@@ -17,7 +17,7 @@ explore: seguimiento_factura_entrega {
   join: dim_cliente_destina {
     view_label: "Cliente"
     relationship: many_to_one
-    sql_on: ${seguimiento_factura_entrega.sr_cliente} = ${dim_cliente_destina.sr_cliente};;
+    sql_on: ${seguimiento_factura_entrega.sr_cliente} = ${dim_cliente_destina.cve_clave};;
     type: left_outer
   }
 
