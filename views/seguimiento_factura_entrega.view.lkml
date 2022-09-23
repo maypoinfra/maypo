@@ -2,19 +2,19 @@ view: seguimiento_factura_entrega {
   sql_table_name: `proyectos-maypo.ODS.SEGUIMIENTO_FACTURA_ENTREGA`
     ;;
 
-  dimension: cantidad_facturada {
+  dimension: sr_material {
     type: string
-    sql: ${TABLE}.CANTIDAD_FACTURADA ;;
+    sql: ${TABLE}.SR_MATERIAL ;;
   }
 
-  dimension: clase_factura {
+  dimension: sr_cliente {
     type: string
-    sql: ${TABLE}.CLASE_FACTURA ;;
+    sql: ${TABLE}.SR_CLIENTE ;;
   }
 
-  dimension: creado_factura {
+  dimension: factura {
     type: string
-    sql: ${TABLE}.CREADO_FACTURA ;;
+    sql: ${TABLE}.FACTURA ;;
   }
 
   dimension: documento_modelo {
@@ -22,9 +22,14 @@ view: seguimiento_factura_entrega {
     sql: ${TABLE}.DOCUMENTO_MODELO ;;
   }
 
-  dimension: factura {
+  dimension: posicion {
+    type: number
+    sql: ${TABLE}.POSICION ;;
+  }
+
+  dimension: clase_factura {
     type: string
-    sql: ${TABLE}.FACTURA ;;
+    sql: ${TABLE}.CLASE_FACTURA ;;
   }
 
   dimension_group: fecha_factura {
@@ -42,30 +47,27 @@ view: seguimiento_factura_entrega {
     sql: ${TABLE}.FECHA_FACTURA ;;
   }
 
-  dimension: posicion {
+  dimension: cantidad_facturada {
     type: number
-    sql: ${TABLE}.POSICION ;;
-  }
-
-  dimension: sr_cliente {
-    type: string
-    sql: ${TABLE}.SR_CLIENTE ;;
-  }
-
-  dimension: sr_material {
-    type: string
-    sql: ${TABLE}.SR_MATERIAL ;;
+    sql: ${TABLE}.CANTIDAD_FACTURADA ;;
   }
 
   dimension: valor_neto {
-    type: string
+    type: number
     sql: ${TABLE}.VALOR_NETO ;;
   }
 
   dimension: valor_neto2 {
-    type: string
+    type: number
     sql: ${TABLE}.VALOR_NETO2 ;;
   }
+
+
+  dimension: creado_factura {
+    type: string
+    sql: ${TABLE}.CREADO_FACTURA ;;
+  }
+
 
   measure: count {
     type: count
