@@ -14,12 +14,12 @@ explore: uic_seguimiento_factura_detalle {
     AND ${dim_material.tipo_material}='Z001';;
 
 
-  join: dim_cliente_destina {
-    view_label: "Cliente"
-    relationship: many_to_one
-    sql_on: ${uic_seguimiento_factura_detalle.sr_cliente} = ${dim_cliente_destina.cve_clave};;
-    type: left_outer
-  }
+  #join: dim_cliente_destina {
+  #  view_label: "Cliente"
+ #   relationship: many_to_one
+ #   sql_on: ${uic_seguimiento_factura_detalle.} = ${dim_cliente_destina.cve_clave};;
+ #   type: left_outer
+ # }
 
   join: dim_material {
     view_label: "Material"

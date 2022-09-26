@@ -122,14 +122,14 @@ view: uic_seguimiento_factura_detalle {
     sql: ${TABLE}.SHIP_TO ;;
   }
 
-  dimension: sold_to {
+  dimension: sr_sold_to {
     type: string
-    sql: ${TABLE}.SOLD_TO ;;
+    sql: ${TABLE}.SR_SOLD_TO ;;
   }
 
-  dimension: sr_cliente {
+  dimension: sr_ship_to {
     type: string
-    sql: ${TABLE}.SR_CLIENTE ;;
+    sql: ${TABLE}.SR_SHIP_TO ;;
   }
 
   dimension: tipo {
