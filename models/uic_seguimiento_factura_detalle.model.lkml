@@ -16,7 +16,7 @@ explore: uic_seguimiento_factura_detalle {
   join: dim_cliente_solicitante {
     view_label: "Cliente Sold"
     relationship: many_to_one
-    sql_on: ${uic_seguimiento_factura_detalle.sr_sold_to}_to} = ${dim_cliente_solicitante.cve_clave};;
+    sql_on: ${uic_seguimiento_factura_detalle.sr_sold_to} = ${dim_cliente_solicitante.cve_clave};;
     type: left_outer
   }
 
