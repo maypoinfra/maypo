@@ -14,7 +14,7 @@ explore: uic_seguimiento_factura_detalle {
     AND ${dim_material.tipo_material}='Z001';;
 
   join: dim_cliente_solicitante {
-    view_label: "Cliente"
+    view_label: "Cliente Sold"
     relationship: many_to_one
     sql_on: ${uic_seguimiento_factura_detalle.sr_sold_to}_to} = ${dim_cliente_solicitante.cve_clave};;
     type: left_outer
@@ -22,7 +22,7 @@ explore: uic_seguimiento_factura_detalle {
 
 
 join: dim_cliente_destina {
-  view_label: "Cliente"
+  view_label: "Cliente Ship"
    relationship: many_to_one
    sql_on: ${uic_seguimiento_factura_detalle.sr_ship_to} = ${dim_cliente_destina.cve_clave};;
    type: left_outer
