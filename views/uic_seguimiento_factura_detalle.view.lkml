@@ -117,11 +117,6 @@ view: uic_seguimiento_factura_detalle {
     sql: ${TABLE}.POSICION_REFERENICIA ;;
   }
 
-  dimension: ship_to {
-    type: string
-    sql: ${TABLE}.SHIP_TO ;;
-  }
-
   dimension: sr_sold_to {
     type: string
     sql: ${TABLE}.SR_SOLD_TO ;;
