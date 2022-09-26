@@ -13,13 +13,20 @@ explore: uic_seguimiento_factura_detalle {
   sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}})
     AND ${dim_material.tipo_material}='Z001';;
 
+  join: dim_cliente_solicitante {
+    view_label: "Cliente"
+    relationship: many_to_one
+    sql_on: ${uic_seguimiento_factura_detalle.sr_sold_to}_to} = ${dim_cliente_solicitante.cve_clave};;
+    type: left_outer
+  }
 
-  #join: dim_cliente_destina {
-  #  view_label: "Cliente"
- #   relationship: many_to_one
- #   sql_on: ${uic_seguimiento_factura_detalle.} = ${dim_cliente_destina.cve_clave};;
- #   type: left_outer
- # }
+
+join: dim_cliente_destina {
+  view_label: "Cliente"
+   relationship: many_to_one
+   sql_on: ${uic_seguimiento_factura_detalle.sr_ship_to} = ${dim_cliente_destina.cve_clave};;
+   type: left_outer
+}
 
   join: dim_material {
     view_label: "Material"
