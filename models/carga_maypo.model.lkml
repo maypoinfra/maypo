@@ -9,7 +9,7 @@ explore: zsd_carga_maypo {
   join: dim_tiempo {
     view_label: "Tiempo"
     relationship: many_to_one
-    sql_on:  ${zsd_carga_maypo.fecha_date}  = ${dim_tiempo.fecha_date};;
+    sql_on:  ${zsd_carga_maypo.fecha_carga_date}  = ${dim_tiempo.fecha_date};;
     type: inner
   }
 }
