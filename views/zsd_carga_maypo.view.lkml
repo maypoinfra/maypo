@@ -17,6 +17,21 @@ view: zsd_carga_maypo {
     sql: ${TABLE}.FECHA ;;
   }
 
+  dimension_group: fecha_carga {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.FECHA_CARGA ;;
+  }
+
   dimension: registros {
     type: number
     sql: ${TABLE}.REGISTROS ;;
