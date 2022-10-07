@@ -49,6 +49,16 @@ view: ejecucion_replicas {
     sql: ${TABLE}.REGISTROS ;;
   }
 
+  dimension: registros_negativos {
+    type: number
+    sql: case when ${TABLE}.REGISTROS  "N" then
+           -100
+         else
+           ${TABLE}.REGISTROS
+        end;;
+  }
+
+
   dimension: tabla_final {
     type: string
     sql: ${TABLE}.TABLA_FINAL ;;
