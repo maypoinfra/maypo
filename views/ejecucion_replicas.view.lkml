@@ -59,6 +59,11 @@ view: ejecucion_replicas {
     sql: ${TABLE}.TERMINO ;;
   }
 
+  measure: Total_Registros {
+    type: sum
+    sql: ${TABLE}.REGISTROS ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
