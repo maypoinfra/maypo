@@ -74,6 +74,15 @@ view: ejecucion_replicas {
     sql: ${TABLE}.REGISTROS ;;
   }
 
+  measure: Total_Registros_N {
+    type: sum
+    sql: case when ${TABLE}.TERMINO = 'N' then
+           -100
+         else
+           ${TABLE}.REGISTROS
+        end;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
