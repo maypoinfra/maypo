@@ -51,7 +51,7 @@ view: ejecucion_replicas {
 
   dimension: registros_negativos {
     type: number
-    sql: case when ${TABLE}.REGISTROS = 'N' then
+    sql: case when ${TABLE}.TERMINO = 'N' then
            -100
          else
            ${TABLE}.REGISTROS
