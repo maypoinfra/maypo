@@ -39,7 +39,7 @@ explore: seguimiento_pedido_entrega {
   join: dim_cliente_interlocutor {
     view_label: "Cliente Interlocutor"
     relationship: many_to_one
-    sql_on:  ${seguimiento_pedido_entrega.cliente_interlocutor} = ${dim_cliente_solicitante.cve_clave};;
+    sql_on:  ${seguimiento_pedido_entrega.cliente_interlocutor} = ${dim_cliente_interlocutor.cve_clave}};;
     type: left_outer
   }
 
