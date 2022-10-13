@@ -263,6 +263,11 @@ view: dim_material {
     sql: ${TABLE}.ENTITYCNTR ;;
   }
 
+  dimension: familia_producto {
+    type: string
+    sql: ${TABLE}.FAMILIA_PROD ;;
+  }
+
   dimension: fabricante {
     type: string
     sql: ${TABLE}.FABRICANTE ;;
