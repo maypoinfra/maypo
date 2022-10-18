@@ -188,9 +188,10 @@ view: h_uic_seguimiento_pedido_principal {
   measure: Tiempo {
     label: "% En Tiempo"
     type: number
-    sql:SUM(${TABLE}.CONTADOR_POSICION_ENTREGA)/SUM(${TABLE}.CONTADOR_POSICION_ENTREGA+${TABLE}.INDICADOR_RETRASO)*100 ;;
+    sql:(SUM(${TABLE}.INDICADOR_RETRASO) * 100) / SUM(${TABLE}.CONTADOR_POSICION_ENTREGA) ;;
+    #sql:SUM(${TABLE}.CONTADOR_POSICION_ENTREGA)/SUM(${TABLE}.CONTADOR_POSICION_ENTREGA+${TABLE}.INDICADOR_RETRASO)*100 ;;
     value_format: "0.0\%"
-  }
+ }
 
   measure: Facturado {
     label: "% Facturado"
