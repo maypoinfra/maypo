@@ -178,25 +178,28 @@ view: h_uic_seguimiento_pedido_principal {
   }
 
 #--------------METRICAS PORCENTAJES-------------------
+
   measure: Suministro {
-  label: "% Suministro"
-  type: number
-   sql: SUM(${TABLE}.CONTADOR_POSICION_PEDIDO)/SUM(${TABLE}.CONTADOR_POSICION_PEDIDO+${TABLE}.NO_SUMINISTRADO)*100 ;;
-  value_format: "0.0\%"
- }
+    label: "% Suministro"
+    type: number
+    sql: (SUM(${TABLE}.NO_SUMINISTRADO * 100) / SUM(${TABLE}.CONTADOR_POSICION_PEDIDO) ;;
+    #sql:SUM(${TABLE}.CONTADOR_POSICION_PEDIDO)/SUM(${TABLE}.CONTADOR_POSICION_PEDIDO+${TABLE}.NO_SUMINISTRADO)*100 ;;
+    value_format: "0.0\%"
+  }
 
   measure: Tiempo {
     label: "% En Tiempo"
     type: number
-    sql:(SUM(${TABLE}.INDICADOR_RETRASO) * 100) / SUM(${TABLE}.CONTADOR_POSICION_ENTREGA) ;;
+    sql: 100-(SUM(${TABLE}.INDICADOR_RETRASO) * 100) / SUM(${TABLE}.CONTADOR_POSICION_ENTREGA) ;;
     #sql:SUM(${TABLE}.CONTADOR_POSICION_ENTREGA)/SUM(${TABLE}.CONTADOR_POSICION_ENTREGA+${TABLE}.INDICADOR_RETRASO)*100 ;;
     value_format: "0.0\%"
- }
+  }
 
   measure: Facturado {
     label: "% Facturado"
     type: number
-    sql:SUM(${TABLE}.CONTADOR_POSICION_ENTREGA)/SUM(${TABLE}.CONTADOR_POSICION_ENTREGA+${TABLE}.CONTADOR_FACTURA)*100 ;;
+    sql: (SUM(${TABLE}.CONTADOR_FACTURA * 100) / SUM(${TABLE}.CONTADOR_POSICION_ENTREGA ;;
+    #sql:SUM(${TABLE}.CONTADOR_POSICION_ENTREGA)/SUM(${TABLE}.CONTADOR_POSICION_ENTREGA+${TABLE}.CONTADOR_FACTURA)*100 ;;
     value_format: "0.0\%"
   }
 
