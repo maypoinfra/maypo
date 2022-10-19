@@ -182,7 +182,7 @@ view: h_uic_seguimiento_pedido_principal {
   measure: Suministro {
     label: "% Suministro"
     type: number
-    sql: (SUM(${TABLE}.NO_SUMINISTRADO * 100) / SUM(${TABLE}.CONTADOR_POSICION_PEDIDO) ;;
+    sql: (SUM(${TABLE}.NO_SUMINISTRADO) * 100) / SUM(${TABLE}.CONTADOR_POSICION_PEDIDO) ;;
     #sql:SUM(${TABLE}.CONTADOR_POSICION_PEDIDO)/SUM(${TABLE}.CONTADOR_POSICION_PEDIDO+${TABLE}.NO_SUMINISTRADO)*100 ;;
     value_format: "0.0\%"
   }
@@ -198,7 +198,7 @@ view: h_uic_seguimiento_pedido_principal {
   measure: Facturado {
     label: "% Facturado"
     type: number
-    sql: (SUM(${TABLE}.CONTADOR_FACTURA * 100) / SUM(${TABLE}.CONTADOR_POSICION_ENTREGA ;;
+    sql: (SUM(${TABLE}.CONTADOR_FACTURA) * 100) / SUM(${TABLE}.CONTADOR_POSICION_ENTREGA) ;;
     #sql:SUM(${TABLE}.CONTADOR_POSICION_ENTREGA)/SUM(${TABLE}.CONTADOR_POSICION_ENTREGA+${TABLE}.CONTADOR_FACTURA)*100 ;;
     value_format: "0.0\%"
   }
