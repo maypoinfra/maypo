@@ -9,7 +9,7 @@ persist_with: proyecto_maypo_default_datagroup
 
 explore: uic_inventarios_entradas_salidas {
   label: "Inventario Entradas y Salidas UIC"
-  view_label: "Hechos-Seguimiento a Pedido"
+  view_label: "Hechos-Inventario Entradas y Salidas"
   sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}})
     AND ${dim_material.tipo_material}='Z001';;
 
