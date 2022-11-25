@@ -13,7 +13,7 @@ view: uic_inventarios_entradas_salidas {
   }
 
   dimension: cve_fecha {
-    type: string
+    type: number
     sql: ${TABLE}.CVE_FECHA ;;
   }
 
