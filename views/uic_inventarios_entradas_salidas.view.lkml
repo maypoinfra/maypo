@@ -37,11 +37,6 @@ view: uic_inventarios_entradas_salidas {
     sql: ${TABLE}.CLASE_MOV ;;
   }
 
-  dimension: clase_movimiento {
-    type: string
-    sql: ${TABLE}.CLASE_MOVIMIENTO ;;
-  }
-
   dimension: delivery {
     type: string
     sql: ${TABLE}.DELIVERY ;;
