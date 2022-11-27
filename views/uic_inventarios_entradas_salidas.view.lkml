@@ -62,9 +62,19 @@ view: uic_inventarios_entradas_salidas {
     sql: ${TABLE}.FECHA ;;
   }
 
-  dimension: hora {
-    type: string
-    sql: ${TABLE}.HORA ;;
+  dimension_group: hora {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    datatype: datetime
+    sql: ${TABLE}.FECHAHORA ;;
   }
 
   dimension: importe {
