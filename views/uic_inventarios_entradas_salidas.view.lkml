@@ -22,11 +22,6 @@ view: uic_inventarios_entradas_salidas {
     sql: ${TABLE}.ALMACEN ;;
   }
 
-  dimension: cantidad {
-    type: number
-    sql: ${TABLE}.CANTIDAD ;;
-  }
-
   dimension: centro {
     type: string
     sql: ${TABLE}.CENTRO ;;
@@ -40,6 +35,11 @@ view: uic_inventarios_entradas_salidas {
   dimension: delivery {
     type: string
     sql: ${TABLE}.DELIVERY ;;
+  }
+
+  dimension: orden_transferencia {
+    type: string
+    sql: ${TABLE}.ORDEN_TRANSFERENCIA ;;
   }
 
   dimension_group: fecha {
@@ -73,23 +73,37 @@ view: uic_inventarios_entradas_salidas {
     html: {{ rendered_value | date: "%T %P" }};;
   }
 
-  dimension: importe {
-    type: number
-    sql: ${TABLE}.IMPORTE ;;
-  }
-
-  dimension: lote {
+ dimension: lote {
     type: string
     sql: ${TABLE}.LOTE ;;
   }
 
-  dimension: orden_transferencia {
-    type: string
-    sql: ${TABLE}.ORDEN_TRANSFERENCIA ;;
+  dimension: cantidad {
+    type: number
+    sql: ${TABLE}.CANTIDAD ;;
+  }
+
+  dimension: importe {
+    type: number
+    sql: ${TABLE}.IMPORTE ;;
   }
 
   measure: count {
     type: count
     drill_fields: []
   }
+
+ measure: Total_Piezas {
+    type: sum
+    sql: ${TABLE}.IMPORTE/1000000 ;;
+    value_format: "$#,##0.00"
+  }
+
+  measure: Total_Importe {
+    type: sum
+    sql: ${TABLE}.IMPORTE/1000000 ;;
+    value_format: "$#,##0.00"
+  }
+
+
 }
