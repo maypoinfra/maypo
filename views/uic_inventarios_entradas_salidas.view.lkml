@@ -95,8 +95,7 @@ view: uic_inventarios_entradas_salidas {
 
  measure: Total_Piezas {
     type: sum
-    sql: ${TABLE}.IMPORTE/1000000 ;;
-    value_format: "$#,##0.00"
+    sql: ${TABLE}.CANTIDAD ;;
   }
 
   measure: Total_Importe {
