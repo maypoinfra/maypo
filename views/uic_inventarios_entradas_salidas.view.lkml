@@ -104,5 +104,11 @@ view: uic_inventarios_entradas_salidas {
     value_format: "$#,##0.00"
   }
 
+  measure: Total_Importe_Salida {
+    type: sum
+    sql: (${TABLE}.IMPORTE/1000000)*-1 ;;
+    value_format: "$#,##0.00"
+  }
+
 
 }
