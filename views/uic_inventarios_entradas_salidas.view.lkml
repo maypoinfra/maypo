@@ -105,17 +105,17 @@ view: uic_inventarios_entradas_salidas {
   }
 
 
-  measure: Total_Piezas_Salida {
+  measure: Piezas_Salida {
     type: sum
     sql: (${TABLE}.CANTIDAD)*-1 ;;
-    label: "Piezas"
+    label: "Total Piezas"
   }
 
-  measure: Total_Importe_Salida {
+  measure: Importe_Salida {
     type: sum
     sql: (${TABLE}.IMPORTE/1000000)*-1 ;;
     value_format: "$#,##0.00"
-    label: "Importe"
+    label: "Total Importe"
   }
 
 
