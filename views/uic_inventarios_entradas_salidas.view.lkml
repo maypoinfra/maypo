@@ -88,11 +88,6 @@ view: uic_inventarios_entradas_salidas {
     sql: ${TABLE}.IMPORTE ;;
   }
 
-  dimension: laboratorio {
-    type: string
-    sql: ${TABLE}.LABORATORIO ;;
-  }
-
 
   measure: count {
     type: count
