@@ -2,14 +2,14 @@ view: uic_inventarios_entradas_salidas {
   sql_table_name: `proyectos-maypo.ODS.UIC_INVENTARIOS_ENTRADAS_SALIDAS`
     ;;
 
-  dimension: sr_almacen {
-    type: number
-    sql: ${TABLE}.SR_ALMACEN ;;
-  }
-
   dimension: sr_material {
     type: number
     sql: ${TABLE}.SR_MATERIAL ;;
+  }
+
+  dimension: cve_proveedor {
+    type: string
+    sql: ${TABLE}.CVE_PROVEEDOR ;;
   }
 
   dimension: cve_fecha {
