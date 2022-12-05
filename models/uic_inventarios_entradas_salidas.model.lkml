@@ -27,13 +27,20 @@ explore: uic_inventarios_entradas_salidas {
     type:  left_outer
   }
 
-
-  join: dim_almacen {
-    view_label: "Almacen"
+  join: dim_proveedor {
+    view_label: "Proveedor"
     relationship: many_to_one
-    sql_on: ${uic_inventarios_entradas_salidas.sr_almacen} = ${dim_almacen.sr_almacen};;
+    #sql_on: ${dim_proveedor.cve_proveedor} = '0000'||${dim_material.prov_reportes};;
+    sql_on: ${dim_proveedor.cve_proveedor} = ${dim_material.prov_reportes};;
     type:  left_outer
   }
+
+  #join: dim_almacen {
+  #  view_label: "Almacen"
+  #  relationship: many_to_one
+  #  sql_on: ${uic_inventarios_entradas_salidas.sr_almacen} = ${dim_almacen.sr_almacen};;
+  #  type:  left_outer
+  #}
 
 
 }
