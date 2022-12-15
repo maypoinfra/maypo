@@ -226,6 +226,7 @@ view: dim_tiempo {
   dimension: mes {
     type: string
     sql: ${TABLE}.mes ;;
+    order_by_field: cve_mes
   }
 
   dimension: mes_anio {
