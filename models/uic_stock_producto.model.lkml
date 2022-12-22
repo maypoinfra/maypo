@@ -9,7 +9,7 @@ persist_with: proyecto_maypo_default_datagroup
 
 explore: uic_stock_producto {
   label: "Stock producto UIC"
-  view_label: "Hechos-Stock producto uic"
+  view_label: "Hechos-Stock producto UIC"
   sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}});;
   #AND ${dim_material.tipo_material}='Z001';;
 
