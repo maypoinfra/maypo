@@ -43,7 +43,7 @@ view: uic_stock_producto {
   }
 
   dimension: costo_lote {
-    type: string
+    type: number
     sql: ${TABLE}.COSTO_LOTE ;;
   }
 
@@ -173,27 +173,27 @@ view: uic_stock_producto {
   }
 
   dimension: importe_bloqueado {
-    type: string
+    type: number
     sql: ${TABLE}.IMPORTE_BLOQUEADO ;;
   }
 
   dimension: importe_ccalidad {
-    type: string
+    type: number
     sql: ${TABLE}.IMPORTE_CCALIDAD ;;
   }
 
   dimension: importe_inventariot {
-    type: string
+    type: number
     sql: ${TABLE}.IMPORTE_INVENTARIOT ;;
   }
 
   dimension: importe_libre {
-    type: string
+    type: number
     sql: ${TABLE}.IMPORTE_LIBRE ;;
   }
 
   dimension: importe_monedal {
-    type: string
+    type: number
     sql: ${TABLE}.IMPORTE_MONEDAL ;;
   }
 
