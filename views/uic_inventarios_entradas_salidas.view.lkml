@@ -70,8 +70,8 @@ view: uic_inventarios_entradas_salidas {
     ]
     datatype: datetime
     sql: ${TABLE}.FECHAHORA ;;
-    html: {{ rendered_value | date: "%k" }};;
-    #html: {{ rendered_value | date: "%T %P" }};;
+    html: {{ rendered_value | date: "%T %P" }};;
+     #html: {{ rendered_value | date: "%k" }};;
   }
 
  dimension: lote {
