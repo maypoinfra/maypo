@@ -59,7 +59,8 @@ view: uic_inventarios_entradas_salidas {
 
   dimension: horas {
     type: string
-    sql: ${TABLE}.HORA ;;
+    sql: ${TABLE}.HORA;;
+
   }
 
   dimension_group: hora {
