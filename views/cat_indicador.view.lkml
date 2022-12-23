@@ -10,7 +10,7 @@ view: cat_indicador {
 
   dimension: cve_proceso {
     type: number
-    description: "Número de proceso que está en la tabla ODS.CONFIGURACION"
+    description: "Númer de proceso que está en la tabla ODS.CONFIGURACION"
     sql: ${TABLE}.CVE_PROCESO ;;
   }
 
