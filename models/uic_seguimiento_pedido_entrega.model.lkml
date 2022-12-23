@@ -11,8 +11,8 @@ persist_with: proyecto_maypo_default_datagroup
 explore: seguimiento_pedido_entrega {
   label: "Seguimiento a Pedidos y Entrega UIC"
   view_label: "Hechos-Seguimiento a pedido y entrega"
-  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}})
-  AND ${dim_material.tipo_material}='Z001';;
+  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}});;
+  #AND ${dim_material.tipo_material}='Z001';;
 
 
   join: dim_material {

@@ -10,8 +10,8 @@ persist_with: proyecto_maypo_default_datagroup
 explore: uic_seguimiento_factura_detalle {
   label: "Seguimiento a Facturas UIC"
   view_label: "Hechos-Seguimiento a Factura"
-  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}})
-    AND ${dim_material.tipo_material}='Z001';;
+  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}});;
+    #AND ${dim_material.tipo_material}='Z001'
 
   join: dim_cliente_solicitante {
     view_label: "Cliente Sold"

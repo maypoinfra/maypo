@@ -10,8 +10,8 @@ persist_with: proyecto_maypo_default_datagroup
 explore: h_uic_seguimiento_pedido_principal {
   label: "Seguimiento a Pedidos UIC"
   view_label: "Hechos-Seguimiento a Pedido"
-  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}})
-                AND ${dim_material.tipo_material}='Z001';;
+  sql_always_where: ${dim_material.prov_reportes}  IN ({{ _user_attributes['user_prov_reporte']}});;
+                #AND ${dim_material.tipo_material}='Z001';;
 
   join: dim_tiempo {
     view_label: "Tiempo"
