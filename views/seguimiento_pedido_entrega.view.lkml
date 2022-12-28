@@ -102,6 +102,7 @@ view: seguimiento_pedido_entrega {
     sql: ${TABLE}.FECHA_MAX_PEDIDO ;;
   }
 
+ #------------SB OPERADOR LOGISTICO--------------
   dimension: funcion_interlocutor {
     type: string
     sql: ${TABLE}.FUNCION_INTERLOCUTOR ;;
@@ -112,10 +113,33 @@ view: seguimiento_pedido_entrega {
     sql: ${TABLE}.CLIENTE_INTERLOCUTOR ;;
   }
 
+  dimension: tipo_sb {
+    type: string
+    sql: ${TABLE}.TIPO_SB ;;
+  }
+
+ #------------RE DESTINARIO FACTURA--------------
+  dimension: funcion_interlocutor2 {
+    type: string
+    sql: ${TABLE}.FUNCION_INTERLOCUTOR2 ;;
+  }
+
+  dimension: cliente_interlocutor2 {
+    type: string
+    sql: ${TABLE}.CLIENTE_INTERLOCUTOR2 ;;
+  }
+
+  dimension: tipo_re {
+    type: string
+    sql: ${TABLE}.TIPO_RE ;;
+  }
+
   dimension: cantidad_bultos {
     type: number
     sql: ${TABLE}.CANTIDAD_BULTOS ;;
   }
+
+
 
   dimension: cantidad_pedido {
     type: number
