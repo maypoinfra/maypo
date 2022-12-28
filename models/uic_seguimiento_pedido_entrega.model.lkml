@@ -37,11 +37,18 @@ explore: seguimiento_pedido_entrega {
   }
 
   join: dim_cliente_interlocutor {
-    view_label: "Cliente Interlocutor"
+    view_label: "Cliente Interlocutor1"
     relationship: many_to_one
     sql_on:  ${seguimiento_pedido_entrega.cliente_interlocutor} = ${dim_cliente_interlocutor.cve_clave};;
     type: left_outer
   }
+
+#  join: dim_cliente_interlocutor2 {
+ #   view_label: "Cliente Interlocutor2"
+  #  relationship: many_to_one
+   # sql_on:  ${seguimiento_pedido_entrega.cliente_interlocutor2} = ${dim_cliente_interlocutor.cve_clave};;
+  #  type: left_outer
+  #}
 
   join: cat_motivo_are {
     view_label: "Motivo Are"
