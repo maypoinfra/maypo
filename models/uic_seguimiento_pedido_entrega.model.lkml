@@ -36,15 +36,17 @@ explore: seguimiento_pedido_entrega {
     type: left_outer
   }
 
+#INTERLOCUTORES-OPERADOR LOGISTICO
   join: dim_cliente_interlocutor {
-    view_label: "Cliente Interlocutor1"
+    view_label: "Cliente Inter Operador Logistico"
     relationship: many_to_one
     sql_on:  ${seguimiento_pedido_entrega.cliente_interlocutor} = ${dim_cliente_interlocutor.cve_clave};;
     type: left_outer
   }
 
+#INTERLOCUTORES-DESTINARIO FACTURA
  join: dim_cliente_interlocutor2 {
-   view_label: "Cliente Interlocutor2"
+   view_label: "Cliente Inter Destinatario Logistico"
     relationship: many_to_one
     sql_on:  ${seguimiento_pedido_entrega.cliente_interlocutor2} = ${dim_cliente_interlocutor.cve_clave};;
     type: left_outer
