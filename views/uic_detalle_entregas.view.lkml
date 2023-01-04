@@ -162,6 +162,12 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.IMPORTE_ENTREGA ;;
   }
 
+  measure: MS_CantidadEntrega {
+    type: sum
+    sql: ${TABLE}.CANTIDAD_ENTREGA ;;
+    label: "MSCantidad Entrega"
+  }
+
   measure: count {
     type: count
     drill_fields: []
