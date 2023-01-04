@@ -147,6 +147,10 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.POSICION_ENTREGA ;;
   }
 
+  dimension: cve_fecha {
+    type: number
+    sql: ${TABLE}.CVE_FECHA ;;
+  }
 
   dimension: cantidad_entrega {
     type: number
