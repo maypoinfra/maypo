@@ -29,4 +29,11 @@ explore: uic_detalle_entregas {
     type: left_outer
   }
 
+  join: dim_tiempo {
+    view_label: "Tiempo"
+    relationship: many_to_one
+    sql_on:  ${uic_detalle_entregas.cve_fecha}  = ${dim_tiempo.cve_fecha};;
+    type: inner
+  }
+
 }
