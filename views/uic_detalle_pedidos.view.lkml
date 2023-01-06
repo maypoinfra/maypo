@@ -2,6 +2,11 @@ view: uic_detalle_pedidos {
   sql_table_name: `proyectos-maypo.ODS.UIC_DETALLE_PEDIDOS`
     ;;
 
+  dimension: estatus_pedido {
+    type: string
+    sql: ${TABLE}.ESTATUS_PEDIDO ;;
+  }
+
   dimension: contrato_cliente {
     type: string
     sql: ${TABLE}.CONTRATO_CLIENTE ;;
