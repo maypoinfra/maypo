@@ -72,6 +72,11 @@ view: uic_detalle_pedidos {
     sql: ${TABLE}.DESTINATARIO_MCIA ;;
   }
 
+  dimension: solicitante {
+    type: string
+    sql: ${TABLE}.SOLICITANTE ;;
+  }
+
   dimension: material {
     type: string
     sql: ${TABLE}.MATERIAL ;;

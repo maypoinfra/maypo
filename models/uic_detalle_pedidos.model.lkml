@@ -29,6 +29,13 @@ explore: uic_detalle_pedidos {
     type: left_outer
   }
 
+  join: dim_cliente_solicitante {
+    view_label: "Cliente Solicita"
+    relationship: many_to_one
+    sql_on:  ${uic_detalle_pedidos.solicitante} = ${dim_cliente_solicitante.cve_clave};;
+    type: left_outer
+  }
+
   #join: cat_motivo_pedido {
   #  view_label: "Motivo Pedido"
   #  relationship: many_to_one
