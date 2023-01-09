@@ -2,6 +2,11 @@ view: uic_detalle_entregas {
   sql_table_name: `proyectos-maypo.ODS.UIC_DETALLE_ENTREGAS`
     ;;
 
+  dimension: clase_documento {
+    type: string
+    sql: ${TABLE}.CLASE_DOCUMENTO ;;
+  }
+
   dimension: contrato_cliente {
     type: string
     sql: ${TABLE}.CONTRATO_CLIENTE ;;
@@ -112,6 +117,36 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.FECHA_MOV_MCIA_REAL ;;
   }
 
+  dimension_group: fecha_envio {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.FECHA_ENVIO ;;
+  }
+
+  dimension_group: fecha_caducidad {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.FECHA_CADUCIDAD ;;
+  }
+
   dimension_group: fecha_pedido {
     type: time
     timeframes: [
@@ -155,6 +190,11 @@ view: uic_detalle_entregas {
   dimension: cantidad_entrega {
     type: number
     sql: ${TABLE}.CANTIDAD_ENTREGA ;;
+  }
+
+  dimension: cantidad_enviada {
+    type: number
+    sql: ${TABLE}.CANTIDAD_ENVIADA ;;
   }
 
   dimension: importe_entrega {
