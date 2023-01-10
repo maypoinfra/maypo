@@ -2,6 +2,26 @@ view: uic_detalle_pedidos {
   sql_table_name: `proyectos-maypo.ODS.UIC_DETALLE_PEDIDOS`
     ;;
 
+  dimension: cve_motivo_rechazo {
+    type: string
+    sql: ${TABLE}.CVE_MOTIVO_RECHAZO ;;
+  }
+
+  dimension: fecha_pedido_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_PEDIDO_MMM ;;
+  }
+
+  dimension: fecha_creacion_pedido_mmm{
+    type: string
+    sql: ${TABLE}.FECHA_CREACION_PEDIDO_MMM ;;
+  }
+
+  dimension: fecha_max_pedido_mmm{
+    type: string
+    sql: ${TABLE}.FECHA_MAX_PEDIDO_MMM ;;
+  }
+
   dimension: estatus_pedido {
     type: string
     sql: ${TABLE}.ESTATUS_PEDIDO ;;
