@@ -36,11 +36,11 @@ explore: uic_detalle_pedidos {
     type: left_outer
   }
 
-  #join: cat_motivo_rechazo_pedido {
-  #  view_label: "Motivo Rechazo"
-  #  relationship: many_to_one
-  #  sql_on:  ${uic_detalle_pedidos.solicitante.cve_motivo_rechazo}  = ${cat_motivo_rechazo_pedido.cve_motivo_rechazo};;
-  #  type: left_outer
-  #}
+  join: cat_motivo_rechazo_pedido {
+    view_label: "Motivo Rechazo"
+    relationship: many_to_one
+    sql_on:  ${uic_detalle_pedidos.cve_motivo_rechazo}  = ${cat_motivo_rechazo_pedido.cve_motivo_rechazo};;
+    type: left_outer
+  }
 
 }
