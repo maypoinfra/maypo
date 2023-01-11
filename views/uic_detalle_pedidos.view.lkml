@@ -7,6 +7,11 @@ view: uic_detalle_pedidos {
     sql: ${TABLE}.CVE_MOTIVO_RECHAZO ;;
   }
 
+  dimension: bonificacion_descuentos {
+    type: string
+    sql: ${TABLE}.BONIFICACION_DESCUENTOS ;;
+  }
+
   dimension: documento_venta {
     type: string
     sql: ${TABLE}.DOCUMENTO_VENTA ;;
