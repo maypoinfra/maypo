@@ -7,6 +7,11 @@ view: dim_cliente_interlocutor2 {
     sql: ${TABLE}.ALTITUD ;;
   }
 
+  dimension: grupo_clientes {
+    type: string
+    sql: ${TABLE}.GRUPO_CLIENTES ;;
+  }
+
   dimension: apartado {
     type: string
     sql: ${TABLE}.APARTADO ;;

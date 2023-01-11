@@ -13,6 +13,11 @@ view: dim_cliente_destina {
     sql: ${TABLE}.ALTITUD ;;
   }
 
+  dimension: grupo_clientes {
+    type: string
+    sql: ${TABLE}.GRUPO_CLIENTES ;;
+  }
+
   dimension: apartado {
     type: string
     sql: ${TABLE}.APARTADO ;;
