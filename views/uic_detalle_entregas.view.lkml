@@ -162,11 +162,6 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.FECHA_PEDIDO ;;
   }
 
-  dimension: grupo_clientes {
-    type: string
-    sql: ${TABLE}.GRUPO_CLIENTES ;;
-  }
-
   dimension: lote {
     type: string
     sql: ${TABLE}.LOTE ;;
