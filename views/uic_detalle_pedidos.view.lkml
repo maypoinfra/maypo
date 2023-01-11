@@ -120,11 +120,13 @@ view: uic_detalle_pedidos {
   dimension: precio_unitario {
     type: number
     sql: ${TABLE}.PRECIO_UNITARIO ;;
+    value_format: "$#,##0.00"
   }
 
   dimension: valor_neto {
     type: number
     sql: ${TABLE}.VALOR_NETO ;;
+    value_format: "$#,##0.00"
   }
 
   measure: count {
