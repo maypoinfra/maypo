@@ -17,8 +17,12 @@ view: uic_detalle_pedidos {
     sql: ${TABLE}.POSICION_VENTA ;;
   }
 
+  dimension: grp_clientes {
+    type: string
+    sql: ${TABLE}.GRP_CLIENTES ;;
+  }
 
-  dimension: fecha_pedido_mmm {
+ dimension: fecha_pedido_mmm {
     type: string
     sql: ${TABLE}.FECHA_PEDIDO_MMM ;;
   }
