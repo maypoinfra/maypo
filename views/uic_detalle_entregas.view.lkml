@@ -27,7 +27,7 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.FECHA_MAX_PEDIDO_MMM ;;
   }
 
-  dimension: fecha_max_entrega_mmm {
+  dimension: fecha_entrega_mmm {
     type: string
     sql: ${TABLE}.FECHA_ENTREGA_MMM ;;
   }
@@ -51,6 +51,7 @@ view: uic_detalle_entregas {
     type: string
     sql: ${TABLE}.FECHA_CADUCIDAD_MMM ;;
   }
+
 
   dimension: contrato_cliente {
     type: string
