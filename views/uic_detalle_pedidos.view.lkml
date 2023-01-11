@@ -7,6 +7,17 @@ view: uic_detalle_pedidos {
     sql: ${TABLE}.CVE_MOTIVO_RECHAZO ;;
   }
 
+  dimension: documento_venta {
+    type: string
+    sql: ${TABLE}.DOCUMENTO_VENTA ;;
+  }
+
+  dimension: posicion_venta {
+    type: string
+    sql: ${TABLE}.POSICION_VENTA ;;
+  }
+
+
   dimension: fecha_pedido_mmm {
     type: string
     sql: ${TABLE}.FECHA_PEDIDO_MMM ;;
