@@ -13,7 +13,7 @@ view: dim_cliente_destina {
     sql: ${TABLE}.ALTITUD ;;
   }
 
-  dimension: grupo_clientes {
+  dimension: grupo_clientes1 {
     type: string
     sql: CASE WHEN SUBSTR(GRUPO_CLIENTES,1,8) = 'CLIENTES' THEN
                    SUBSTR(GRUPO_CLIENTES,10,22)
