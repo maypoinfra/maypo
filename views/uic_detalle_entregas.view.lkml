@@ -7,6 +7,11 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.CLASE_DOCUMENTO ;;
   }
 
+  dimension: grp_clientes {
+    type: string
+    sql: ${TABLE}.GRP_CLIENTES ;;
+  }
+
   dimension: fecha_creacion_pedido_mmm {
     type: string
     sql: ${TABLE}.FECHA_CREACION_PEDIDO_MMM ;;
