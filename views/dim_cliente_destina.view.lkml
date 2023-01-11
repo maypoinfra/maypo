@@ -15,7 +15,13 @@ view: dim_cliente_destina {
 
   dimension: grupo_clientes {
     type: string
-    sql: ${TABLE}.GRUPO_CLIENTES ;;
+    sql: CASE WHEN SUBSTR(GRUPO_CLIENTES,1,8) = 'CLIENTES' THEN
+                   SUBSTR(GRUPO_CLIENTES,10,22)
+              WHEN SUBSTR(GRUPO_CLIENTES,1,12) = 'STD CLIENTES' THEN
+                   SUBSTR(GRUPO_CLIENTES,14,22)
+              ELSE
+                   GRUPO_CLIENTES
+          END;;
   }
 
   dimension: apartado {
