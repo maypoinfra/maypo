@@ -200,6 +200,7 @@ view: uic_detalle_entregas {
   dimension: importe_entrega {
     type: number
     sql: ${TABLE}.IMPORTE_ENTREGA ;;
+    value_format: "$#,##0.00"
   }
 
   measure: MS_CantidadEntrega {
