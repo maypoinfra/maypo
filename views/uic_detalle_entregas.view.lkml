@@ -7,6 +7,46 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.CLASE_DOCUMENTO ;;
   }
 
+  dimension: fecha_creacion_pedido_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_CREACION_PEDIDO_MMM ;;
+  }
+
+  dimension: fecha_pedido_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_PEDIDO_MMM ;;
+  }
+
+  dimension: fecha_max_pedido_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_MAX_PEDIDO_MMM ;;
+  }
+
+  dimension: fecha_max_entrega_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_ENTREGA_MMM ;;
+  }
+
+  dimension: fecha_mov_mcia_real_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_MOV_MCIA_REAL_MMM ;;
+  }
+
+  dimension: fecha_are_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_ARE_MMM ;;
+  }
+
+  dimension: fecha_envio_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_ENVIO_MMM ;;
+  }
+
+  dimension: fecha_caducidad_mmm {
+    type: string
+    sql: ${TABLE}.FECHA_CADUCIDAD_MMM ;;
+  }
+
   dimension: contrato_cliente {
     type: string
     sql: ${TABLE}.CONTRATO_CLIENTE ;;
