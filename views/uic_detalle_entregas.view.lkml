@@ -47,11 +47,21 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.FECHA_ENVIO_MMM ;;
   }
 
-  dimension: fecha_caducidad_mmm {
+  dimension: fecha_delivery_mmm {
     type: string
-    sql: ${TABLE}.FECHA_CADUCIDAD_MMM ;;
+    sql: ${TABLE}.FECHA_DELIVERY_MMM ;;
   }
 
+
+  dimension: motivo_are {
+    type: string
+    sql: ${TABLE}.MOTIVO_ARE ;;
+  }
+
+  dimension: cantidad_are {
+    type: number
+    sql: ${TABLE}.CANTIDAD_ARE ;;
+  }
 
   dimension: contrato_cliente {
     type: string
