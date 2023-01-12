@@ -36,4 +36,12 @@ explore: uic_detalle_entregas {
     type: inner
   }
 
+  join: dim_lote {
+    view_label: "Lotes"
+    relationship: many_to_one
+    sql_on: ${dim_lote.cve_material} = ${uic_detalle_entregas.material}
+        AND ${dim_lote.cve_lote}     = ${uic_detalle_entregas.lote};;
+    type:  left_outer
+  }
+
 }
