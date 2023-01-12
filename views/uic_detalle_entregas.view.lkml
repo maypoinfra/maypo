@@ -53,9 +53,9 @@ view: uic_detalle_entregas {
   }
 
 
-  dimension: motivo_are {
+  dimension: cve_motivo_are {
     type: string
-    sql: ${TABLE}.MOTIVO_ARE ;;
+    sql: ${TABLE}.CVE_MOTIVO_ARE ;;
   }
 
   dimension: cantidad_are {

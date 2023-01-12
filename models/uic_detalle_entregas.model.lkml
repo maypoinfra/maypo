@@ -44,4 +44,11 @@ explore: uic_detalle_entregas {
     type:  left_outer
   }
 
+  join: cat_motivo_are {
+    view_label: "Motivo Are"
+    relationship: many_to_one
+    sql_on:  ${uic_detalle_entregas.cve_motivo_are}  = ${cat_motivo_are.cve_motivo_are};;
+    type: left_outer
+  }
+
 }
