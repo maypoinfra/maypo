@@ -43,4 +43,11 @@ explore: uic_detalle_pedidos {
     type: left_outer
   }
 
+  join: cat_grupo_cliente {
+    view_label: "Grupo Clientes"
+    relationship: many_to_one
+    sql_on:  ${uic_detalle_pedidos.cve_grupo_clientes}  = ${cat_grupo_cliente.cve_grupo_cliente};;
+    type: left_outer
+  }
+
 }
