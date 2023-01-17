@@ -22,9 +22,9 @@ view: uic_detalle_pedidos {
     sql: ${TABLE}.POSICION_VENTA ;;
   }
 
-  dimension: grp_clientes {
+  dimension: cve_grupo_clientes {
     type: string
-    sql: ${TABLE}.GRP_CLIENTES ;;
+    sql: ${TABLE}.CVE_GRUPO_CLIENTES ;;
   }
 
  dimension: fecha_pedido_mmm {
