@@ -38,6 +38,11 @@ view: dlt_cat_estadosmx {
     sql_longitude: ${longitud} ;;
   }
 
+  measure: metricasum {
+    type: sum
+    drill_fields: []
+  }
+
   measure: count {
     type: count
     drill_fields: []
