@@ -40,8 +40,10 @@ view: dlt_cat_estadosmx {
 
   measure: metricasum {
     type: sum
+    sql: ${TABLE}.METRICA ;;
     drill_fields: []
   }
+
 
   measure: count {
     type: count
