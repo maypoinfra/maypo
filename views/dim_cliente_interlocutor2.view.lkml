@@ -416,6 +416,12 @@ view: dim_cliente_interlocutor2 {
     sql: ${TABLE}.ZN_VENTA ;;
   }
 
+  dimension: map_points {
+    type: location
+    sql_latitude: ${latitud_umu} ;;
+    sql_longitude: ${longitud_umu} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
