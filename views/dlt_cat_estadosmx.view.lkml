@@ -32,6 +32,12 @@ view: dlt_cat_estadosmx {
     sql: ${TABLE}.REGION ;;
   }
 
+  dimension: map_points {
+    type: location
+    sql_latitude: ${latitud} ;;
+    sql_longitude: ${longitud} ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
