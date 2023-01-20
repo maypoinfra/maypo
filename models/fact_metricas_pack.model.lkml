@@ -16,7 +16,7 @@ explore: fact_metricas_pack {
     view_label: "Estados-municipios"
     relationship: many_to_one
     sql_on: ${fact_metricas_pack.cve_entidad}  = ${cat_estados_muni.cve_entidad}
-       AND  ${fact_metricas_pack.cve_municipio = ${cat_estados_muni.cve_municipio} ;;
+       AND  ${fact_metricas_pack.cve_municipio} = ${cat_estados_muni.cve_municipio} ;;
     type: inner
   }
 
