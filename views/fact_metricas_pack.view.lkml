@@ -27,6 +27,11 @@ view: fact_metricas_pack {
     sql: ${TABLE}.PRECIO ;;
   }
 
+  dimension: unidades {
+    type: number
+    sql: ${TABLE}.UNIDADES ;;
+  }
+
   dimension: producto {
     type: string
     sql: ${TABLE}.PRODUCTO ;;
@@ -40,6 +45,12 @@ view: fact_metricas_pack {
   dimension: sku {
     type: number
     sql: ${TABLE}.SKU ;;
+  }
+
+  measure: monto {
+    type: sum
+    sql: ${TABLE}.PRECIO * ${TABLE}.UNIDADES ;;
+    drill_fields: []
   }
 
   measure: count {
