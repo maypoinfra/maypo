@@ -217,6 +217,11 @@ view: uic_detalle_entregas {
     sql: ${TABLE}.FECHA_MOV_MCIA_REAL_MMM ;;
   }
 
+  dimension: fecha_caducidad_mmm {
+    type: string
+    sql: ${TABLE}. FECHA_CADUCIDAD_MMM ;;
+  }
+
   dimension: fecha_are_mmm {
     type: string
     sql: ${TABLE}.FECHA_ARE_MMM ;;
