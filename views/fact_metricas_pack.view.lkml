@@ -12,6 +12,11 @@ view: fact_metricas_pack {
     sql: ${TABLE}.CVE_ENTIDAD ;;
   }
 
+  dimension: cve_localidad {
+    type: number
+    sql: ${TABLE}.CVE_LOCALIDAD ;;
+  }
+
   dimension: cve_municipio {
     type: number
     sql: ${TABLE}.CVE_MUNICIPIO ;;
