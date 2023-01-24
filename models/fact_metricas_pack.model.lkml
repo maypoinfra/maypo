@@ -9,7 +9,7 @@ persist_with: proyecto_maypo_default_datagroup
 
 explore: fact_metricas_pack {
   label: "Fact metricas pack"
-  view_label: "metricas"
+  view_label: "Fact"
 
 
   join: cat_estados_muni {
