@@ -2,8 +2,19 @@ view: cat_estados_muni {
   sql_table_name: `proyectos-maypo.DSA.CAT_ESTADOS_MUNI`
     ;;
 
+  dimension: cve_localidad {
+    type: number
+    sql: ${TABLE}.CVE_LOCALIDAD ;;
+  }
+
+  dimension: nom_municipio {
+    type: string
+    sql: ${TABLE}.NOM_MUNICIPIO ;;
+  }
+
   dimension: map_points {
     type: location
+    suggest_dimension: nom_municipio
     sql_latitude: ${lat_decimal} ;;
     sql_longitude: ${lon_decimal} ;;
   }
@@ -28,10 +39,7 @@ view: cat_estados_muni {
     sql: ${TABLE}.CVE_ENTIDAD ;;
   }
 
-  dimension: cve_localidad {
-    type: number
-    sql: ${TABLE}.CVE_LOCALIDAD ;;
-  }
+
 
   dimension: cve_municipio {
     type: number
@@ -57,10 +65,7 @@ view: cat_estados_muni {
     sql: ${TABLE}.NOM_ESTADO ;;
   }
 
-  dimension: nom_municipio {
-    type: string
-    sql: ${TABLE}.NOM_MUNICIPIO ;;
-  }
+
 
   dimension: pob_femenina {
     type: string
