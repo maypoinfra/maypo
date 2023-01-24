@@ -8,7 +8,6 @@ view: fact_metricas_pack {
   }
 
   dimension: cve_entidad {
-    primary_key: yes
     type: number
     sql: ${TABLE}.CVE_ENTIDAD ;;
   }
@@ -49,21 +48,21 @@ view: fact_metricas_pack {
   }
 
   measure: precio_m {
-    type: sum_distinct
+    type: sum
     sql: ${TABLE}.PRECIO  ;;
     value_format: "$#,##0.00"
     drill_fields: []
   }
 
   measure: unidades_m {
-    type: sum_distinct
+    type: sum
     sql: ${TABLE}.UNIDADES ;;
     value_format: "$#,##0.00"
     drill_fields: []
   }
 
   measure: monto {
-    type: sum_distinct
+    type: sum
     sql: ${TABLE}.PRECIO * ${TABLE}.UNIDADES ;;
     value_format: "$#,##0.00"
     drill_fields: []
