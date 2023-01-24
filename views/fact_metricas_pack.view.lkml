@@ -48,7 +48,7 @@ view: fact_metricas_pack {
   }
 
   dimension: sku {
-    type: number
+    type: string
     sql: ${TABLE}.SKU ;;
   }
 
