@@ -14,7 +14,6 @@ view: fact_metricas_pack {
   }
 
   dimension: cve_municipio {
-    primary_key: yes
     type: number
     sql: ${TABLE}.CVE_MUNICIPIO ;;
   }
