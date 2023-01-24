@@ -47,6 +47,18 @@ view: fact_metricas_pack {
     sql: ${TABLE}.SKU ;;
   }
 
+  measure: precio_m {
+    type: sum
+    sql: ${TABLE}.PRECIO  ;;
+    drill_fields: []
+  }
+
+  measure: unidades_m {
+    type: sum
+    sql: ${TABLE}.UNIDADES ;;
+    drill_fields: []
+  }
+
   measure: monto {
     type: sum
     sql: ${TABLE}.PRECIO * ${TABLE}.UNIDADES ;;
