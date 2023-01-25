@@ -76,5 +76,6 @@ view: fact_metricas_pack {
   measure: count {
     type: count
     drill_fields: []
+    label: "Num. Productos"
   }
 }

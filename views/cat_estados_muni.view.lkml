@@ -10,6 +10,7 @@ view: cat_estados_muni {
   dimension: nom_municipio {
     type: string
     sql: ${TABLE}.NOM_MUNICIPIO ;;
+    view_label: "Municipio"
   }
 
   dimension: map_points {
@@ -51,6 +52,7 @@ view: cat_estados_muni {
   dimension: localidad {
     type: string
     sql: ${TABLE}.LOCALIDAD ;;
+    view_label: "Localidad"
   }
 
 
@@ -63,6 +65,7 @@ view: cat_estados_muni {
   dimension: nom_estado {
     type: string
     sql: ${TABLE}.NOM_ESTADO ;;
+    view_label: "Estado"
   }
 
 
