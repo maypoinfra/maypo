@@ -14,7 +14,7 @@ view: cat_estados_muni {
       icon_url: "http://google.com/favicon.ico"
     }
     link: {
-      label: "Por Categoria"
+      label: "Por Laboratorios"
       url: "https://maypo1.cloud.looker.com/looks/159"
     }
     type: string
