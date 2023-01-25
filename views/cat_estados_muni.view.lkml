@@ -13,6 +13,10 @@ view: cat_estados_muni {
       url: "https://www.google.com/maps?q={{ value }}"
       icon_url: "http://google.com/favicon.ico"
     }
+    link: {
+      label: "Por Categoria"
+      url: "https://maypo1.cloud.looker.com/looks/159"
+    }
     type: string
     sql: ${TABLE}.NOM_MUNICIPIO ;;
     view_label: "Municipio"
