@@ -8,9 +8,9 @@ view: cat_estados_muni {
   }
 
   dimension: nom_municipio {
-    link: {
-      label: "Google"
-      url: "http://www.google.com/search?q={{ value }}"
+     link: {
+      label: "Google Maps"
+      url: "https://www.google.com/maps?q={{ value }}"
       icon_url: "http://google.com/favicon.ico"
     }
     type: string
