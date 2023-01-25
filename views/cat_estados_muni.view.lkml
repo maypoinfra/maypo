@@ -19,12 +19,7 @@ view: cat_estados_muni {
   }
 
   dimension: map_points {
-    link: {
-      label: "Google Maps"
-      url: "https://www.google.com/maps?q={{ value }}"
-      icon_url: "http://google.com/favicon.ico"
-    }
-    type: location
+   type: location
     suggest_dimension: nom_municipio
     sql_latitude: ${lat_decimal} ;;
     sql_longitude: ${lon_decimal} ;;
