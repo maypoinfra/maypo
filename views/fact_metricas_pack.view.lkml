@@ -75,7 +75,10 @@ view: fact_metricas_pack {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [user_details*]
     label: "Num. Productos"
+  }
+  set: user_details {
+    fields: [sku,producto,laboratorios,categoria,segmento,precio,unidades]
   }
 }
