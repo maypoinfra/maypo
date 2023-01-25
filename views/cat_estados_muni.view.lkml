@@ -8,6 +8,11 @@ view: cat_estados_muni {
   }
 
   dimension: nom_municipio {
+    link: {
+      label: "Google"
+      url: "http://www.google.com/search?q={{ value }}"
+      icon_url: "http://google.com/favicon.ico"
+    }
     type: string
     sql: ${TABLE}.NOM_MUNICIPIO ;;
     view_label: "Municipio"
